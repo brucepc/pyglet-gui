@@ -382,7 +382,7 @@ class Manager(ViewerManager, ControllerManager):
     def on_mouse_press(self, x, y, button, modifiers):
         retval = ControllerManager.on_mouse_press(self, x, y, button, modifiers)
         if self.hit_test(x, y):
-            if not retval:
+            if not retval and self.is_movable:
                 self._is_dragging = True
                 retval = True
         return retval
