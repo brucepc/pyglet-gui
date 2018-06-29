@@ -377,7 +377,6 @@ class Manager(ViewerManager, ControllerManager):
         if self.hit_test(x, y):
             if not self._root_group.is_on_top():
                 self.pop_to_top()
-            return True
 
     def on_mouse_press(self, x, y, button, modifiers):
         retval = ControllerManager.on_mouse_press(self, x, y, button, modifiers)
